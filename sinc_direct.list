@@ -1,0 +1,10 @@
+# 直连补充列表
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,*.99600000.xyz
+DOMAIN-SUFFIX,bt.99600000.xyz
+DOMAIN-SUFFIX,debian.org
+DOMAIN-SUFFIX,bba.sinc.us.kg
+DOMAIN-SUFFIX,cloud.umami.is
+
+
