@@ -1,10 +1,21 @@
 # 直连补充列表
 
 # 域名后缀匹配
-DOMAIN-SUFFIX,*.99600000.xyz
-DOMAIN-SUFFIX,bt.99600000.xyz
-DOMAIN-SUFFIX,debian.org
-DOMAIN-SUFFIX,bba.sinc.us.kg
-#DOMAIN-SUFFIX,cloud.umami.is
 
+# 我的自定义
+DOMAIN-SUFFIX,99600000.xyz,DIRECT
+DOMAIN-SUFFIX,debian.org,DIRECT
+DOMAIN-SUFFIX,sinc.us.kg,DIRECT
 
+# 远程控制软件直连规则
+# 向日葵 (Sunlogin / Oray)
+DOMAIN-SUFFIX,oray.com,DIRECT
+DOMAIN-SUFFIX,oray.net,DIRECT
+DOMAIN-SUFFIX,sunlogin.net,DIRECT
+# ToDesk
+DOMAIN-SUFFIX,todesk.com,DIRECT
+# RayLink (可选)
+DOMAIN-SUFFIX,raylink.live,DIRECT
+
+# IP
+IP-CIDR,154.219.118.220/32,DIRECT
