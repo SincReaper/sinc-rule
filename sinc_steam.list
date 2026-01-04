@@ -1,0 +1,34 @@
+# === 社区 & 社交 (必须代理，否则无法访问) ===
+steamcommunity.com        # Steam 社区主页 (创意工坊、市场、个人主页) [被墙]
+steam-chat.com            # 新版 Steam 好友聊天系统 [被墙]
+steam.tv                  # Steam 直播服务
+steamdeck.com             # Steam Deck 掌机官网
+underlords.com            # 刀塔霸业官网
+playartifact.com          # Artifact 游戏官网
+s.team                    # Steam 短链接服务
+valvesoftware.com         # Valve 公司官网
+
+# === 商店 & API (建议代理，否则加载慢/报错 -118) ===
+steampowered.com          # Steam 商店主页 (买游戏用)
+steamgames.com            # 商店相关页面
+steam-api.com             # Steam API 接口 (部分第三方工具需要)
+
+# === 图片 & 静态资源 (必须代理，否则头像/截图裂开) ===
+steamusercontent.com      # 【关键】用户上传的内容 (头像、截图、也就是所谓的"图床") [被墙]
+steamcommunity-a.akamaihd.net # 社区静态资源 CDN
+steamcdn-a.akamaihd.net       # 商店图片 CDN
+steamstore-a.akamaihd.net     # 商店页面资源
+steamuserimages-a.akamaihd.net # 用户头像 CDN
+steamvideo-a.akamaihd.net     # 商店视频/预告片 CDN
+
+# === 直播 & 移动端 ===
+steambroadcast.akamaized.net  # 广播/直播 CDN
+steammobile.akamaized.net     # 手机 App 相关 CDN
+steampipe.akamaized.net       # 管道传输 CDN
+
+# === 通用 CDN (建议代理或根据实际情况调整) ===
+# 这些是 Akamai 和 Azure 的通用 CDN，通常服务于商店图片
+akamaihd.net.edgesuite.net
+a4e8s8k3.map2.ssl.hwcdn.net
+f3b7q2p3.ssl.hwcdn.net
+steamcloudsweden.blob.core.windows.net # 瑞典云存储节点
