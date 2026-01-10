@@ -4,7 +4,7 @@
 #DOMAIN-SUFFIX,cloud.umami.is
 
 # hi168.com OSS免费云盘
-#DOMAIN-SUFFIX,hi168.com
+DOMAIN-SUFFIX,hi168.com
 
 # 域名关键字匹配
 #DOMAIN-KEYWORD,1e100
