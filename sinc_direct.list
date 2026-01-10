@@ -3,22 +3,22 @@
 # 域名后缀匹配
 
 # 我的自定义
-#DOMAIN-SUFFIX,bt.99600000.xyz,DIRECT
-DOMAIN-SUFFIX,debian.org,DIRECT
-DOMAIN-SUFFIX,sinc.us.kg,DIRECT
+#DOMAIN-SUFFIX,bt.99600000.xyz
+DOMAIN-SUFFIX,debian.org
+DOMAIN-SUFFIX,sinc.us.kg
 
 # hi168.com OSS免费云盘
-DOMAIN-SUFFIX,hi168.com,DIRECT
+DOMAIN-SUFFIX,hi168.com
 
 # 远程控制软件直连规则
 # 向日葵 (Sunlogin / Oray)
-DOMAIN-SUFFIX,oray.com,DIRECT
-DOMAIN-SUFFIX,oray.net,DIRECT
-DOMAIN-SUFFIX,sunlogin.net,DIRECT
+DOMAIN-SUFFIX,oray.com
+DOMAIN-SUFFIX,oray.net
+DOMAIN-SUFFIX,sunlogin.net
 # ToDesk
-DOMAIN-SUFFIX,todesk.com,DIRECT
+DOMAIN-SUFFIX,todesk.com
 # RayLink (可选)
-DOMAIN-SUFFIX,raylink.live,DIRECT
+DOMAIN-SUFFIX,raylink.live
 
 # IP
-IP-CIDR,154.219.118.220/32,DIRECT
+IP-CIDR,154.219.118.220/32
