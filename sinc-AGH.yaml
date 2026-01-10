@@ -85,7 +85,9 @@ dns:
     - "+.market.xiaomi.com"
     - "+.lan"
     - "+.local"
-
+   # 自定义 sinc real ip组
+    - "rule-set:sinc_real_ip"
+    
   # 默认 DNS (Bootstrap DNS)：用于启动时的基础解析
   # 这里的 IP 可以填 127.0.0.1，端口填 AGH 的端口 953
   # 这样 OpenClash 启动时会直接问本机的 AGH
@@ -98,6 +100,8 @@ dns:
     # 强制国内域名、私有域名 -> 转发给 127.0.0.1:953 (你的 AGH)
     # OpenClash 会自动下载 Geosite 数据库，无需额外文件
     "geosite:cn,private,apple,steam@cn,category-games@cn": "127.0.0.1:953"
+    # 强制域名走国内 DNS 解析
+    "rule-set:sinc_real_ip": "127.0.0.1:953"
 
   # --- 国外域名 DNS (Fallback) ---
   # 没匹配到上面策略的，走这里 (Encrypted DNS)
@@ -120,7 +124,7 @@ proxy-groups:
   - {name: 🤖 ChatGPT, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🪟 Microsoft, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🥭 Microsoft, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🎵 TikTok, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 📲 Telegram, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
@@ -144,19 +148,21 @@ proxy-groups:
 # 8. 规则列表 (保持你的原设)
 rules:
   - RULE-SET,sinc_direct,直连
+  - RULE-SET,sinc_real_ip,直连
+  - RULE-SET,steam_cn_domain,直连
+  
   - RULE-SET,sinc_proxy,🚀 默认代理
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,steam_cn_class,直连
-  - RULE-SET,steam_class,🌼 Steam
+  - RULE-SET,steam_domain,🌼 Steam
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
-  - RULE-SET,microsoft_domain,🪟 Microsoft
+  - RULE-SET,microsoft_domain,🥭 Microsoft
   - RULE-SET,apple_domain,直连
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
@@ -176,10 +182,18 @@ rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  # 自定义sin_domain 锚点
+  sinc_domain: &sinc_domain {type: http, interval: 86400, behavior: domain, format: text}
+  
 rule-providers: 
+  # 自定义规则集 
   sinc_direct: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_direct.list"}
   sinc_proxy: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_proxy.list"}
-   
+  sinc_real_ip: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_real_ip.list"}  
+  steam_cn_domain: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_steam@cn.list"}
+  steam_domain: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_steam.list"}   
+  
+  # 引用别人的规则集   
   private_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   ai: {  <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
@@ -196,8 +210,6 @@ rule-providers:
   tiktok_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
   geolocation-!cn: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
-  steam_cn_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_steam@cn.list"}
-  steam_class: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/refs/heads/main/sinc_steam.list"} 
 
   private_ip: {<<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"}
   cn_ip: { <<: *ip, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
