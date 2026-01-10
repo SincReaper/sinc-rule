@@ -7,6 +7,9 @@
 DOMAIN-SUFFIX,debian.org,DIRECT
 DOMAIN-SUFFIX,sinc.us.kg,DIRECT
 
+# hi168.com OSS免费云盘
+DOMAIN-SUFFIX,hi168.com,DIRECT
+
 # 远程控制软件直连规则
 # 向日葵 (Sunlogin / Oray)
 DOMAIN-SUFFIX,oray.com,DIRECT
