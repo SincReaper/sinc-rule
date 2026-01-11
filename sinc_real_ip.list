@@ -1,19 +1,12 @@
-# 168云盘
 hi168.com
-
-# === Steam 核心下载域名 ===
 steamcontent.com
 steamstatic.com
 steampipe.akamaized.net
-
-# === 完美世界 & 国服 ===
 csgo.wmsj.cn
 dota2.wmsj.cn
 wmsjsteam.com
 steamchina.com
 gstore.val.manlaxy.com
-
-# === 国内下载 CDN 节点 ===
 client-update.queniuqe.com
 dl.steam.clngaa.com
 st.dl.bscstorage.net
@@ -24,8 +17,6 @@ steamstatic.com.8686c.com
 alibaba.cdn.steampipe.steamcontent.com
 lv.queniujq.cn
 xz.pphimalayanrt.com
-
-# === 全球下载 CDN (防漏网) ===
 steam.apac.qtlglb.com
 steam.eca.qtlglb.com
 steam.naeu.qtlglb.com
