@@ -1,34 +1,35 @@
-# === 完美世界 & 国服核心 (CS2/Dota2 国服必选) ===
-csgo.wmsj.cn              # CS:GO/CS2 完美世界国服服务器
-dota2.wmsj.cn             # Dota2 完美世界国服服务器
-wmsjsteam.com             # 完美世界 Steam 登录验证接口
-steamchina.com            # 蒸汽平台 (Steam 中国版) 主域名
-gstore.val.manlaxy.com    # 蒸汽平台相关服务
+# === 完美世界 & 国服核心 ===
+csgo.wmsj.cn
+dota2.wmsj.cn
+wmsjsteam.com
+steamchina.com
+gstore.val.manlaxy.com
 
-# === 游戏连接 & P2P 通讯 (掉线主要原因) ===
-steamserver.net           # 【关键】Steam 游戏服务器数据传输、P2P 连接 (走代理极易掉线)
+# === 游戏连接 & P2P 通讯 (防止掉线) ===
+steamserver.net
 
-# === 游戏下载 & CDN (国内下载节点) ===
-# 如果这些走代理，会消耗大量机场流量且速度慢
-steamcontent.com          # Steam 游戏内容下载主域名
-client-update.queniuqe.com # Steam 客户端更新服务 (国内节点)
-dl.steam.clngaa.com       # 国内下载 CDN (长宽/联通等)
-st.dl.bscstorage.net      # 国内下载 CDN
-st.dl.eccdnx.com          # 国内下载 CDN (边缘计算节点)
-st.dl.pinyuncloud.com     # 国内下载 CDN (品云)
-steampowered.com.8686c.com # 阿里云 CDN 用于 Steam 下载
-steamstatic.com.8686c.com  # 阿里云 CDN 用于 Steam 静态资源
-alibaba.cdn.steampipe.steamcontent.com # 阿里云 Steam 管道下载
-lv.queniujq.cn            # 国内 CDN 节点
-xz.pphimalayanrt.com      # 国内 CDN 节点
+# === 游戏下载主域名 ===
+steamcontent.com
 
-# === 其他地区下载/CDN (通常直连即可，除非很慢) ===
-steam.apac.qtlglb.com     # 亚太地区下载节点
-steam.eca.qtlglb.com      # 欧亚地区下载节点
-steam.naeu.qtlglb.com     # 北美/欧洲下载节点
-steam.ru.qtlglb.com       # 俄罗斯下载节点
-steam.cdn.on.net          # 澳洲节点
-steam.cdn.webra.ru        # 俄罗斯节点
-edge.steam-dns.top.comcast.net # 康卡斯特 CDN (美国)
-steam.cdn.orcon.net.nz    # 新西兰节点
-steam.cdn.slingshot.co.nz # 新西兰节点
+# === 国内下载 CDN 节点 ===
+client-update.queniuqe.com
+dl.steam.clngaa.com
+st.dl.bscstorage.net
+st.dl.eccdnx.com
+st.dl.pinyuncloud.com
+steampowered.com.8686c.com
+steamstatic.com.8686c.com
+alibaba.cdn.steampipe.steamcontent.com
+lv.queniujq.cn
+xz.pphimalayanrt.com
+
+# === 全球下载 CDN (通常直连即可) ===
+steam.apac.qtlglb.com
+steam.eca.qtlglb.com
+steam.naeu.qtlglb.com
+steam.ru.qtlglb.com
+steam.cdn.on.net
+steam.cdn.webra.ru
+edge.steam-dns.top.comcast.net
+steam.cdn.orcon.net.nz
+steam.cdn.slingshot.co.nz
