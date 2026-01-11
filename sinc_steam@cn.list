@@ -6,7 +6,7 @@ steamchina.com
 gstore.val.manlaxy.com
 
 # === 游戏连接 & P2P 通讯 (防止掉线) ===
-steamserver.net
+#steamserver.net
 
 # === 游戏下载主域名 ===
 steamcontent.com
