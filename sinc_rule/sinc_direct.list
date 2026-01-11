@@ -4,7 +4,7 @@
 # 域名后缀匹配
 
 # 我的自定义
-#DOMAIN-SUFFIX,bt.99600000.xyz
+DOMAIN-SUFFIX,99600000.xyz
 DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,sinc.us.kg
 
