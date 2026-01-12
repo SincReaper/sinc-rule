@@ -1,8 +1,8 @@
 # Fake-IP 过滤名单 (保持纯净)
 # fake-ip-filter
 
-msftconnecttest.com
-msftncsi.com
-market.xiaomi.com
++.msftconnecttest.com
++.msftncsi.com
++.market.xiaomi.com
 
 +.hi168.com
