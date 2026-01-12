@@ -1,7 +1,7 @@
 # nameserver-policy
 # 强制让下面域名去访问指定 DNS
 # hi168 云盘
-hi168.com
++.hi168.com
 
 # steam CDN 完美世界等
 steamcontent.com
