@@ -13,3 +13,11 @@
 +.sinc.us.kg
 +.sinc.de5.net
 +.sincc.dynv6.net
+
+# Lucky DDNS 探测接口 (排除 Fake-IP)
++.oray.com
++.66666.host
++.666666.host
++.ipip.net
++.ipw.cn
++.3322.net

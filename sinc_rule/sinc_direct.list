@@ -3,10 +3,25 @@
 
 # 域名后缀匹配
 
-# 我的自定义
+# === 你的 Lucky/NAS 域名直连 ===
+# 防止回声问题，确保内网访问不绕路
 DOMAIN-SUFFIX,99600000.xyz
-DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,sinc.us.kg
+DOMAIN-SUFFIX,6889889.xyz
+DOMAIN-SUFFIX,sinc.us.kg
+DOMAIN-SUFFIX,sinc.de5.net
+DOMAIN-SUFFIX,sincc.dynv6.net
+
+# === Lucky DDNS 探测接口直连 ===
+# 确保获取公网 IP 时不走代理
+- DOMAIN-SUFFIX,oray.com
+- DOMAIN-SUFFIX,66666.host
+- DOMAIN-SUFFIX,666666.host
+- DOMAIN-SUFFIX,ipip.net
+- DOMAIN-SUFFIX,ipw.cn
+- DOMAIN-SUFFIX,3322.net
+
+
 
 # hi168.com OSS免费云盘
 DOMAIN-SUFFIX,hi168.com
@@ -21,6 +36,9 @@ DOMAIN-SUFFIX,sunlogin.net
 DOMAIN-SUFFIX,todesk.com
 # RayLink (可选)
 DOMAIN-SUFFIX,raylink.live
+
+# debian
+DOMAIN-SUFFIX,debian.org
 
 # IP
 IP-CIDR,154.219.118.220/32
