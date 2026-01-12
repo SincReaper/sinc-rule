@@ -81,10 +81,6 @@ dns:
   # Fake-IP 过滤名单 (保持纯净)
   fake-ip-filter:
     - "rule-set:sinc_no_fakeip"
-    #- "+.msftconnecttest.com"
-    #- "+.msftncsi.com"
-    #- "+.market.xiaomi.com"
-    #- "+.hi168.com"
     - "+.lan"
     - "+.local"
     - "time.*.com"
@@ -99,13 +95,6 @@ dns:
   # 这里的 127.0.0.1:953 指向本机的 AdGuard Home
   nameserver-policy:
     "rule-set:sinc_direct_dns": "127.0.0.1:953"
-    # 强制让 Steam 等域名去问本地 AGH，获取国内满速 CDN IP
-    #"+.hi168.com": "127.0.0.1:953"
-    #"+.steamcontent.com": "127.0.0.1:953"
-    #"+.steamstatic.com": "127.0.0.1:953"
-    #"+.steampipe.akamaized.net": "127.0.0.1:953"
-    #"+.wmsj.cn": "127.0.0.1:953"
-    #"+.steamchina.com": "127.0.0.1:953"
     # 其他国内域名
     "geosite:cn,private,apple,steam@cn,category-games@cn": "127.0.0.1:953"
 
@@ -156,23 +145,12 @@ proxy-groups:
 rules:
   # === 1. Steam 下载强制直连 (优先级最高) ===
   - RULE-SET,sinc_steam_direct,DIRECT
-  #- DOMAIN-SUFFIX,steamcontent.com,DIRECT
-  #- DOMAIN-SUFFIX,steamstatic.com,DIRECT
-  #- DOMAIN-SUFFIX,steampipe.akamaized.net,DIRECT
-  #- DOMAIN-KEYWORD,steamcontent,DIRECT
-  #- DOMAIN-KEYWORD,steamstatic,DIRECT
   
   # === 2. 救命规则：防止更新规则失败 ===
   - DOMAIN-SUFFIX,gh-proxy.com,🚀 默认代理
 
   # === 3. 强制 Steam 登录走代理 ===
-  #- DOMAIN-SUFFIX,steamserver.net,🌼 Steam
-  #- DOMAIN-SUFFIX,steamcommunity.com,🌼 Steam
-  #- DOMAIN,store.steampowered.com,🌼 Steam
   - RULE-SET,sinc_steam_direct,🌼 Steam
-  # 完美世界
-  #- DOMAIN-SUFFIX,wmsj.cn,DIRECT
-  #- DOMAIN-SUFFIX,steamchina.com,DIRECT
 
   # === 4. Sinc 自定义规则 (通过远程列表管理) ===
   - RULE-SET,sinc_direct,直连
@@ -217,10 +195,10 @@ rule-providers:
   sinc_direct: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct.list"}
   sinc_proxy: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_proxy.list"}
   steam_domain: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam.list"} 
-  sinc_direct_dns: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct_dns.list", path: ./ruleset/sinc_direct_dns.yaml }
-  sinc_no_fakeip: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_no_fakeip.list", path: ./ruleset/sinc_no_fakeip.yaml }
-  sinc_steam_direct: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_direct.list", path: ./ruleset/sinc_steam_direct.yaml }
-  sinc_steam_proxy:  { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_proxy.list", path: ./ruleset/sinc_steam_proxy.yaml }  
+  sinc_direct_dns: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct_dns.list" }
+  sinc_no_fakeip: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_no_fakeip.list" }
+  sinc_steam_direct: { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_direct.list" }
+  sinc_steam_proxy:  { <<: *sinc_domain, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_proxy.list" }  
   
   # 引用别人的规则集   
   private_domain: { <<: *domain, url: "https://gh-proxy.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
