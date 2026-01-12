@@ -1,0 +1,11 @@
+# nameserver-policy
+# 强制让下面域名去访问指定 DNS
+# hi168 云盘
+hi168.com
+
+# steam CDN 完美世界等
+steamcontent.com
+steamstatic.com
+steampipe.akamaized.net
+wmsj.cn
+steamchina.com
