@@ -139,6 +139,8 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    #- https://cloudflare-dns.com/dns-query
+    #- https://dns.google/dns-query
   fake-ip-filter:
     - rule-set:Direct
     - rule-set:Private
