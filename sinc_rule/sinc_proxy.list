@@ -5,6 +5,7 @@
 # 域名后缀匹配
 DOMAIN-SUFFIX,qichiyu.com
 #DOMAIN-SUFFIX,jable.tv
+DOMAIN-SUFFIX,mangshe.one
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,suying
