@@ -41,3 +41,6 @@ DOMAIN-SUFFIX,debian.org
 
 # IP
 IP-CIDR,154.219.118.220/32
+
+# cn.bing
+DOMAIN-SUFFIX,cn.bing.com
