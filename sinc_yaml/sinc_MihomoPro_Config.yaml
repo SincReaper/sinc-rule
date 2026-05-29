@@ -15,7 +15,7 @@
 # 地址: https://github.com/SincReaper/sinc-rule
 # 版本: v26.1.0
 # 作者: sinc
-# 更新: 2026 年 1 月 9 日
+# 更新: 2026 年 5 月 29 日
 
 
 # ==================== 锚点配置 ====================
@@ -39,13 +39,18 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
+FilterYX: &FilterYX '^(?=.*(优选域名)).*$'
+FilterCU: &FilterCU '^(?=.*(联通)).*$'
+FilterCT: &FilterCT '^(?=.*(电信)).*$'
+FilterCM: &FilterCM '^(?=.*(移动)).*$'
+
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
-SelectPY: &SelectPY {type: select, proxies: [默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 故障转移, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 专线网络, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
+SelectPY: &SelectPY {type: select, proxies: [默认代理, 故障转移, 专线网络, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 专线网络, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 故障转移, 专线网络, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
+SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 故障转移, 香港策略, 专线网络, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障转移, 香港策略, 狮城策略, 专线网络, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 直接连接]}
 
 # ==================== 代理提供者 ====================
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[优][备]为每个节点添加机场名称前缀，可自定义
@@ -154,7 +159,7 @@ dns:
 proxy-groups:
   # ==================== 主要策略组 ====================
   - {name: 默认代理,     <<: *SelectFB, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Static.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 全球手动, 冷门自选, 直接连接], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [香港策略, 狮城策略, 日本策略, 专线网络, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 全球手动, 冷门自选, 直接连接], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
   - {name: 国外流量,     <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: 国内流量,     <<: *SelectDC, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
   - {name: 兜底流量,     <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
@@ -162,7 +167,7 @@ proxy-groups:
 
   # ==================== 功能策略组 ====================
   - {name: 网络测试,     <<: *SelectPY, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png}
-  - {name: 抖快书定位,   type: select, proxies: [直接连接, 香港策略, 台湾策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 欧盟策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Null_Nation.png}
+  - {name: 抖快书定位,   type: select, proxies: [直接连接, 香港策略, 台湾策略, 狮城策略, 日本策略, 专线网络, 韩国策略, 美国策略, 欧盟策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Null_Nation.png}
 
   # ==================== 媒体服务 ====================
   - {name: Emby服,      <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png}
@@ -183,6 +188,13 @@ proxy-groups:
   - {name: 微软服务,     <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
   - {name: 谷歌服务,     <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
   - {name: 苹果服务,     <<: *SelectPY, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
+
+  # === 专线与运营商分组 ===
+  - {name: 专线网络,     type: select, proxies: [优选域名, 联通, 电信, 移动], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Proxy.png}
+  - {name: 优选域名,     type: select, proxies: [优选自动, 优选均衡-散列, 优选均衡-轮询], include-all: true, filter: *FilterYX, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 联通,         type: select, proxies: [联通自动, 联通均衡-散列, 联通均衡-轮询], include-all: true, filter: *FilterCU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 电信,         type: select, proxies: [电信自动, 电信均衡-散列, 电信均衡-轮询], include-all: true, filter: *FilterCT, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 移动,         type: select, proxies: [移动自动, 移动均衡-散列, 移动均衡-轮询], include-all: true, filter: *FilterCM, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
 
   # ==================== 地区策略组 ====================
   - {name: 香港策略,     type: select, proxies: [香港自动, 香港均衡-散列, 香港均衡-轮询], include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
@@ -205,6 +217,12 @@ proxy-groups:
   - {name: 韩国自动,     <<: *BaseUT, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
   - {name: 美国自动,     <<: *BaseUT, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
   - {name: 欧盟自动,     <<: *BaseUT, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  # === 运营商自动测速 ===
+  - {name: 优选自动,     <<: *BaseUT, include-all: true, filter: *FilterYX, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 联通自动,     <<: *BaseUT, include-all: true, filter: *FilterCU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 电信自动,     <<: *BaseUT, include-all: true, filter: *FilterCT, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+  - {name: 移动自动,     <<: *BaseUT, include-all: true, filter: *FilterCM, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
+
 
   # ==================== 负载均衡-散列 ====================
   - {name: 香港均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
@@ -214,6 +232,12 @@ proxy-groups:
   - {name: 韩国均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
   - {name: 美国均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
   - {name: 欧盟均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
+  # === 运营商负载均衡-散列 ===
+  - {name: 优选均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterYX, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
+  - {name: 联通均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterCU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
+  - {name: 电信均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterCT, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
+  - {name: 移动均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterCM, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
+
 
   # ==================== 负载均衡-轮询 ====================
   - {name: 香港均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
@@ -223,6 +247,11 @@ proxy-groups:
   - {name: 韩国均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
   - {name: 美国均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
   - {name: 欧盟均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  # === 运营商负载均衡-轮询 ===
+  - {name: 优选均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterYX, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  - {name: 联通均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterCU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  - {name: 电信均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterCT, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  - {name: 移动均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterCM, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
 # ==================== 规则路由 ====================
 rules: 
