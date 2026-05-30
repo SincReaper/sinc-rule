@@ -42,5 +42,18 @@ DOMAIN-SUFFIX,debian.org
 # IP
 IP-CIDR,154.219.118.220/32
 
-# cn.bing
-DOMAIN-SUFFIX,cn.bing.com
+# Bing 国内主站及接口
+DOMAIN,cn.bing.com
+DOMAIN,cn.bing.net
+
+# Bing 静态资源 (CSS, JS 等前端依赖)
+DOMAIN-SUFFIX,s.cn.bing.net
+DOMAIN,r.bing.com
+DOMAIN,c.bing.com
+DOMAIN,c.bing.net
+
+# Bing 图片与多媒体资源 (搜索缩略图、每日壁纸等)
+DOMAIN-SUFFIX,th.bing.com
+DOMAIN-SUFFIX,mm.bing.net
+DOMAIN-SUFFIX,mm.bing.com
+DOMAIN-SUFFIX,th.bing.net
