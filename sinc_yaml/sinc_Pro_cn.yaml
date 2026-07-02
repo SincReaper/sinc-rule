@@ -142,7 +142,7 @@ proxy-groups:
   - { name: 漏网之鱼, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png }
   
   # 自动选择
-  - { name: 故障转移, <<: *fallback, proxies: [美国策略, 优选专区, 日本策略, 狮城策略, 韩国策略, 香港策略, 台湾策略, 优选域名策略, 电信策略, 联通策略, 移动策略, IPv6策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png }
+  - { name: 故障转移, <<: *fallback, proxies: [美国策略, 日本策略, 狮城策略, 韩国策略, 香港策略, 台湾策略, 优选域名策略, 电信策略, 联通策略, 移动策略, IPv6策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png }
 
   # 手动选择
   - { name: 全球手动, type: select, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png }
@@ -155,7 +155,6 @@ proxy-groups:
   - { name: 韩国策略, type: select, include-all: true, filter: *filter-kr, proxies: [韩国自动, 韩国均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png }
   - { name: 美国策略, type: select, include-all: true, filter: *filter-us, proxies: [美国自动, 美国均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png }
   # === 运营商优选策略 ===
-  - { name: 优选专区, type: select, proxies: [优选域名自动, 优选域名均衡, 电信自动, 电信均衡, 联通自动, 联通均衡, 移动自动, 移动均衡, IPv6自动, IPv6均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Server.png }
   - { name: 优选域名策略, type: select, include-all: true, filter: *filter-yx, proxies: [优选域名自动, 优选域名均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Server.png }
   - { name: 电信策略, type: select, include-all: true, filter: *filter-ct, proxies: [电信自动, 电信均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Server.png }
   - { name: 联通策略, type: select, include-all: true, filter: *filter-cu, proxies: [联通自动, 联通均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Server.png }
