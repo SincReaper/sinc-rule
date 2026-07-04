@@ -131,6 +131,7 @@ proxy-groups:
   - { name: 开发服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png }
   - { name: EMBY,    type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png }
   - { name: 国际媒体, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming.png }
+  - { name: Steam服务, type: select, proxies: *hk-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Steam.png }
   - { name: 游戏平台, type: select, proxies: *sg-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png }
   - { name: 货币平台, type: select, proxies: *jp-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Cryptocurrency_3.png }
   - { name: 谷歌服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png }
@@ -193,8 +194,11 @@ proxy-groups:
 rules:
   # 域名规则
   # === Sinc 自定义规则 ===
+  - RULE-SET,sinc_steam_direct,DIRECT
+  - RULE-SET,sinc_steam_proxy,Steam服务
   - RULE-SET,sinc_direct,DIRECT
   - RULE-SET,sinc_proxy,国外流量
+
   
   # 广告拦截
   - RULE-SET,Tracking,广告拦截
@@ -258,6 +262,9 @@ rules:
 rule-providers:
   sinc_direct: { <<: *rule-set-class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct.list" }
   sinc_proxy:  { <<: *rule-set-class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_proxy.list" }
+  sinc_steam_direct: { <<: *rule-set-class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_direct.list" }
+  sinc_steam_proxy:  { <<: *rule-set-class, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_steam_proxy.list" }
+  
   # 域名规则
   Tracking:       { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs }
   Advertising:    { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs } 
