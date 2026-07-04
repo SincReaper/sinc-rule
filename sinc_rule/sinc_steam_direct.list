@@ -6,3 +6,6 @@ DOMAIN-SUFFIX,wmsj.cn
 DOMAIN-SUFFIX,steamchina.com
 DOMAIN-KEYWORD,steamcontent
 DOMAIN-KEYWORD,steampipe
+DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
+DOMAIN-KEYWORD,qtlglb
+DOMAIN-SUFFIX,steamcloudsweden.blob.core.windows.net
