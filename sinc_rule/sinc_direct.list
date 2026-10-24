@@ -88,3 +88,7 @@ DOMAIN-SUFFIX,protection.outlook.com
 
 # AI 公益站直连
 DOMAIN-SUFFIX,ps.air-outer.com
+
+
+# EdgeOne 博客强制直连，不走新加坡
+DOMAIN-SUFFIX,seasir.top
