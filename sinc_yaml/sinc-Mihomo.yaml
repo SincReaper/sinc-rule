@@ -46,6 +46,7 @@ rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   domain_text: &domain_text {type: http, interval: 86400, behavior: domain, format: text}
+  classical_text: &classical_text {type: http, interval: 86400, behavior: classical, format: text}
 
 proxy-providers:
   # 优质订阅源 - 优质节点集合，使用时请修改
@@ -223,8 +224,8 @@ rules:
 
 rule-providers:
   # === sin 自定义规则 ===
-  sinc_direct: { <<: *domain_text, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct.list" }
-  sinc_proxy:  { <<: *domain_text, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_proxy.list" }
+  sinc_direct: { <<: *classical_text, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_direct.list" }
+  sinc_proxy:  { <<: *classical_text, url: "https://gh-proxy.com/raw.githubusercontent.com/SincReaper/sinc-rule/main/sinc_rule/sinc_proxy.list" }
   # === 七尺宇 规则 ===
   fakeipfilter_cn: {<<: *domain_text, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/rules/fakeipfilter-cn.list"}
   fakeipfilter_!cn: {<<: *domain_text, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/rules/fakeipfilter-!cn.list"}
